@@ -1,0 +1,154 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)	
+	.container
+		max-width: 1170px
+
+
+// ≥992px
++media-breakpoint-down(md)
+	header
+		.header-top
+			.header-menu
+				ul
+					li				
+						margin-left: 10px
+
+	.s-progress
+		li:nth-child(2n) 
+			&>div
+				float: none
+	.s-progress-button_line
+		left: 80%
+		span
+			&:nth-child(2)
+				&:before
+					left: 20px
+	.facts
+		&-item
+			text-align: center
+			white-space: normal
+
+// ≥768px
++media-breakpoint-down(sm)
+	body
+		font-size: 14px
+		&.ishome
+			.header
+				height: auto
+				padding-bottom: 20%
+	.hamburger
+		display: inline-block
+
+	header
+		.header-top
+			.header-menu
+				// display: none
+				position: absolute
+				top: -1000%	
+				width: 50%
+				border: 1px solid $accent
+				border-top: none
+				float: none
+				background-color: $over
+				transition: all 500ms ease-in-out
+				z-index: 0
+				opacity: 0
+				li
+					display: block
+					margin: 20px 0px
+				&.nav-active
+					top: 100%
+					opacity: 1	
+
+
+	.s-progress-button_line
+		left: 85%
+
+	.team-item
+		margin-bottom: 10%
+		.team-item-avatar
+			margin-bottom: 20px
+	.facts
+		&-item
+			text-align: left
+			margin-bottom: 20px
+			&__icon
+				width: 100px
+
+
+
+	.find-items 
+		.find-item
+			text-align: center
+			&__icon
+				text-align: center
+			&__info
+		 		text-align: left
+
+// ≥576px
++media-breakpoint-down(xs)
+	header 
+		.header-welcome
+			padding-top: 15%
+			.h1
+				font-size: 25vw
+	.s-progress
+		.container
+			.progress-item
+				max-width: 350px
+				margin-right: 20%
+		.s-progress-button_line
+			height: 600px
+			span
+				&:before
+					top: -5px
+					left: 12px
+
+				&:first-child
+					top: -6px
+				&:nth-child(2)
+					top: 220px
+				&:last-child
+					top: 470px
+
+	.facts
+		&-item
+			white-space: nowrap
+			text-align: center
+			&__icon
+				font-size: 38px
+				width: 55px
+				text-align: right
+				margin-right: 15px
+			&__info
+				&__number
+					font-size: 40px	
+				&__description				
+					font-size: 12px
+	.copyright
+		text-align: center
+
+		.socials
+			margin-top: 20px
+			float: none
+			display: block
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
